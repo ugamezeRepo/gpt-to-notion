@@ -1,0 +1,25 @@
+openapi: 3.1.0
+info:
+  title: SaveToNotion API
+  version: 1.0.0
+paths:
+  /save:
+    post:
+      summary: 질문/답변을 Notion DB에 저장
+      operationId: saveToNotion
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                question:
+                  type: string
+                  description: GPT에게 받은 질문
+                answer:
+                  type: string
+                  description: GPT의 응답
+      responses:
+        '200':
+          description: 저장 성공
