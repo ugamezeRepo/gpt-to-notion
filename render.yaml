@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: gpt-to-notion
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: NOTION_API_KEY
+        sync: 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
+      - key: NOTION_DATABASE_ID
+        sync: fal23ab4e942a6d8081bfc3c2cba62247f7se
