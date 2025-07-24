@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Request
 from pydantic import BaseModel
-from dotenv import load_dotev
+from dotenv import load_dotenv
 import requests
 import os
 import datetime
